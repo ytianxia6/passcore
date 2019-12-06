@@ -10,6 +10,7 @@ install:
 script:
   - |
     (
+      docker login --username=$DOCKER_USERNAME -p $DOCKER_PASSWORD
       docker build -t "ytianxia6/passcore:latest" .
       docker push "ytianxia6/passcore:latest"
       ~/official-images/test/run.sh "ytianxia6/passcore:latest"
