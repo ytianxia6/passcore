@@ -11,8 +11,8 @@ script:
   - |
     (
       docker build -t "ytianxia6/passcore:latest" .
-      ~/official-images/test/run.sh "ytianxia6/passcore:latest"
       docker push "ytianxia6/passcore:latest"
+      ~/official-images/test/run.sh "ytianxia6/passcore:latest"
     )
 after_script:
   - docker images
